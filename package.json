@@ -9,14 +9,14 @@
     "url": "git+https://github.com/stchristian/rn-dropdown-picker.git"
   },
   "scripts": {
-    "build": "tsc"
+    "build": "rm -rf ./dist && tsc",
+    "prepare": "npm run build"
   },
   "peerDependencies": {
     "react": ">= 16.13.1",
     "react-native": ">= 0.63.3",
     "react-native-vector-icons": ">= 7.1.0"
   },
-  "prepublish": "tsc",
   "keywords": [
     "react",
     "react-native",
