@@ -8,7 +8,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import DropdownEntry from './Portal/DropdownEntry';
+import DropdownEntry from './DropdownEntry';
 import Dropdown, { Option } from './Dropdown';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as constants from './constants';
@@ -29,7 +29,7 @@ const DropdownPicker = ({
   dropdownContainerStyle,
   placeholder,
 }: {
-  options: Option[];
+  options?: Option[];
   leftIconForSelected?: () => JSX.Element;
   textInputStyle?: StyleProp<TextStyle>;
   itemTextStyle?: StyleProp<TextStyle>;

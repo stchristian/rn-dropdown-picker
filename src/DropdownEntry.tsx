@@ -1,5 +1,5 @@
 import React, { ReactElement, useContext, useEffect } from 'react';
-import { DropdownProps } from '../Dropdown';
+import { DropdownProps } from './Dropdown';
 import { DropdownContext } from './DropdownContext';
 
 const DropdownEntry = ({

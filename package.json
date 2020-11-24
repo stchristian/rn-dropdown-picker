@@ -2,7 +2,8 @@
   "name": "rn-dropdown-picker",
   "version": "0.0.0",
   "description": "A simple dropdown picker for react-native applications.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/stchristian/rn-dropdown-picker.git"
@@ -15,6 +16,7 @@
     "react-native": ">= 0.63.3",
     "react-native-vector-icons": ">= 7.1.0"
   },
+  "prepublish": "tsc",
   "keywords": [
     "react",
     "react-native",

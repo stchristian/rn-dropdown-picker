@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DropdownProps } from '../Dropdown';
+import { DropdownProps } from './Dropdown';
 import { DropdownContext } from './DropdownContext';
 
 const DropdownProvider = (props: React.PropsWithChildren<{}>) => {
