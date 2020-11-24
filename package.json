@@ -1,0 +1,26 @@
+{
+  "name": "rn-dropdown-picker",
+  "version": "0.0.0",
+  "description": "A simple dropdown picker for react-native applications.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stchristian/rn-dropdown-picker.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": ">= 16.13.1",
+    "react-native": ">= 0.63.3",
+    "react-native-vector-icons": ">= 7.1.0"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "dropdown",
+    "select"
+  ],
+  "author": "Hübner Krisztián",
+  "license": "MIT"
+}
