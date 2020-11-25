@@ -90,7 +90,7 @@ const DropdownPicker = ({
   );
 
   return (
-    <>
+    <React.Fragment>
       <View
         ref={containerRef}
         style={[styles.container, selectedContainerStyle]}
@@ -139,7 +139,7 @@ const DropdownPicker = ({
           // iconElement={iconElement}
         />
       </DropdownEntry>
-    </>
+    </React.Fragment>
   );
 };
 

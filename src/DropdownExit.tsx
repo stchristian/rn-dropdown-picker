@@ -4,7 +4,7 @@ import { DropdownContext } from './DropdownContext';
 const DropdownExit = () => {
   const context = React.useContext(DropdownContext);
 
-  return <>{context.dropdown}</>;
+  return <React.Fragment>{context.dropdown}</React.Fragment>;
 };
 
 export default React.memo(DropdownExit);
