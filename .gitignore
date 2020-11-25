@@ -4,3 +4,4 @@
 
 /dist
 .npmignore
+/node_modules

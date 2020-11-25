@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
+import * as React from 'react';
 import { DropdownContext } from './DropdownContext';
 
 const DropdownExit = () => {
-  const context = useContext(DropdownContext);
+  const context = React.useContext(DropdownContext);
 
   return <>{context.dropdown}</>;
 };

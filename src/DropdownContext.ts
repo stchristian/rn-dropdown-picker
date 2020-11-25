@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { DropdownProps } from './Dropdown';
 type DropdownContextType = {
   dropdown: React.ReactElement<DropdownProps> | null;

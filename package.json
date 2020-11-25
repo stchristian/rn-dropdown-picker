@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "rm -rf ./dist && tsc",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": ">= 16.13.1",
@@ -24,5 +24,10 @@
     "select"
   ],
   "author": "Hübner Krisztián",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-native": "^0.63.37",
+    "@types/react-native-vector-icons": "^6.4.6"
+  }
 }
