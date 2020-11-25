@@ -10,7 +10,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import * as constants from './constants';
+import constants from './constants';
 
 export type Option = {
   label: string;

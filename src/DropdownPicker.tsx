@@ -11,7 +11,7 @@ import {
 import DropdownEntry from './DropdownEntry';
 import Dropdown, { Option } from './Dropdown';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import * as constants from './constants';
+import constants from './constants';
 
 const DropdownPicker = ({
   options = [],
