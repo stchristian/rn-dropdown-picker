@@ -27,6 +27,7 @@ const DropdownPicker = ({
   searchPlaceholderTextColor,
   onSearch,
   dropdownContainerStyle,
+  openSelectedContainerStyle,
   placeholder,
 }: {
   options?: Option[];
@@ -35,6 +36,7 @@ const DropdownPicker = ({
   itemTextStyle?: StyleProp<TextStyle>;
   dropdownContainerStyle?: StyleProp<ViewStyle>;
   selectedContainerStyle?: StyleProp<ViewStyle>;
+  openSelectedContainerStyle?: StyleProp<ViewStyle>;
   selectedValueContainerStyle?: StyleProp<ViewStyle>;
   iconElement?: () => JSX.Element;
   searchable?: boolean;
@@ -93,7 +95,11 @@ const DropdownPicker = ({
     <React.Fragment>
       <View
         ref={containerRef}
-        style={[styles.container, selectedContainerStyle]}
+        style={[
+          styles.container,
+          selectedContainerStyle,
+          dropdownOpen ? openSelectedContainerStyle : undefined,
+        ]}
         onLayout={() => {}}>
         {leftIconForSelected &&
           React.cloneElement(leftIconForSelected(), {
