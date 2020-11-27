@@ -154,6 +154,7 @@ const styles = StyleSheet.create({
   },
   container: {
     alignItems: 'center',
+    paddingHorizontal: 10,
     shadowOffset: {
       width: 0,
       height: -2,
@@ -173,7 +174,6 @@ const styles = StyleSheet.create({
   indicatorIconStyle: {
     fontSize: constants.FONT_SIZE * 1.5,
     color: '#aaaaaa',
-    marginRight: 10,
   },
   openDropdownTextStyle: {
     // borderBottomLeftRadius: 0,

@@ -1,5 +1,7 @@
 # Simple dropdown picker for react-native
 
+![example](./assets/demo.png)
+
 ## **Caution**
 
 The package is under development, do not use it for production.
