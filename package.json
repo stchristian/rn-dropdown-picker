@@ -30,6 +30,7 @@
     "@types/react-native": "^0.63.37",
     "@types/react-native-vector-icons": "^6.4.6",
     "react-native-typescript-transformer": "^1.2.13",
+    "tslib": "^2.0.3",
     "typescript": "^4.1.2"
   },
   "dependencies": {}
