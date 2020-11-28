@@ -5,6 +5,7 @@ import {
   Text,
   TextInput,
   TextStyle,
+  TouchableWithoutFeedback,
   View,
   ViewStyle,
 } from 'react-native';
@@ -45,10 +46,7 @@ const DropdownPicker = ({
   showIndicatorIcon?: boolean;
   searchPlaceholderTextColor?: string;
   placeholder?: string;
-  indicatorIcon?: (
-    isOpen: boolean,
-    setDropdownOpen: (value: boolean) => any,
-  ) => JSX.Element;
+  indicatorIcon?: (isOpen: boolean) => JSX.Element;
   onOptionClicked?: (option: Option) => any;
 }) => {
   const [selectedOption, setSelectedOption] = useState<Option | null>(null);
@@ -93,43 +91,46 @@ const DropdownPicker = ({
 
   return (
     <React.Fragment>
-      <View
-        ref={containerRef}
-        style={[
-          styles.container,
-          selectedContainerStyle,
-          dropdownOpen ? openSelectedContainerStyle : undefined,
-        ]}
-        onLayout={() => {}}>
-        {leftIconForSelected &&
-          React.cloneElement(leftIconForSelected(), {
-            style: styles.leftIconForSelected,
-          })}
-        <Text
-          ref={textRef}
-          numberOfLines={1}
+      <TouchableWithoutFeedback onPress={() => setDropdownOpen(!dropdownOpen)}>
+        <View
+          ref={containerRef}
           style={[
-            styles.textStyle,
-            leftIconForSelected ? styles.textWithIcon : undefined,
-            !selectedOption ? styles.noSelectedValue : undefined,
-            dropdownOpen ? styles.openDropdownTextStyle : undefined,
-            textInputStyle,
-          ]}>
-          {selectedOption
-            ? selectedOption.label
-            : placeholder || 'Select an option...'}
-        </Text>
-        {showIndicatorIcon &&
-          (indicatorIcon ? (
-            indicatorIcon(dropdownOpen, setDropdownOpen)
-          ) : (
-            <Icon
-              name={dropdownOpen ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
-              style={styles.indicatorIconStyle}
-              onPress={() => setDropdownOpen(!dropdownOpen)}
-            />
-          ))}
-      </View>
+            styles.container,
+            selectedContainerStyle,
+            dropdownOpen ? openSelectedContainerStyle : undefined,
+          ]}
+          onLayout={() => {}}>
+          {leftIconForSelected &&
+            React.cloneElement(leftIconForSelected(), {
+              style: styles.leftIconForSelected,
+            })}
+          <Text
+            ref={textRef}
+            numberOfLines={1}
+            style={[
+              styles.textStyle,
+              leftIconForSelected ? styles.textWithIcon : undefined,
+              !selectedOption ? styles.noSelectedValue : undefined,
+              dropdownOpen ? styles.openDropdownTextStyle : undefined,
+              textInputStyle,
+            ]}>
+            {selectedOption
+              ? selectedOption.label
+              : placeholder || 'Select an option...'}
+          </Text>
+          {showIndicatorIcon &&
+            (indicatorIcon ? (
+              indicatorIcon(dropdownOpen)
+            ) : (
+              <Icon
+                name={
+                  dropdownOpen ? 'keyboard-arrow-up' : 'keyboard-arrow-down'
+                }
+                style={styles.indicatorIconStyle}
+              />
+            ))}
+        </View>
+      </TouchableWithoutFeedback>
       <DropdownEntry>
         <Dropdown
           containerStyle={dropdownContainerStyle}
