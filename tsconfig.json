@@ -16,7 +16,8 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "declaration": true /* Generates corresponding '.d.ts' file. */,
-    "sourceMap": true /* Generates corresponding '.map' file. */
+    "sourceMap": true /* Generates corresponding '.map' file. */,
+    "skipLibCheck": true
   },
   "exclude": [
     "example",
